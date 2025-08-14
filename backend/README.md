@@ -57,6 +57,23 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Database Migrations
+
+```bash
+# Run all pending migrations
+$ npm run migration:run
+
+# Generate a new migration (example)
+$ npm run migration:generate -- -n MigrationName
+```
+
+## Run seed data
+
+```bash
+# Run seed data
+$ npm run seed
+```
+
 ## Deployment
 
 When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
