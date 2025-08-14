@@ -1,4 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+# Fokuslah Frontend (Next.js)
+
+This is the frontend for the Fokuslah monorepo, built with [Next.js](https://nextjs.org) and [Tailwind CSS](https://tailwindcss.com/).
+
+## Prerequisites
+
+- Node.js 18 or 20 (recommended)
+- npm (comes with Node.js)
+
+## Setup & Development
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   The app will be available at [http://localhost:3000](http://localhost:3000).
+
+3. **Tailwind CSS** is already configured. To use Tailwind utility classes, just add them to your components. The main CSS file is at `app/globals.css`.
+
+4. **API Integration:**
+   - The frontend expects the backend (NestJS) to be running at [http://localhost:3001](http://localhost:3001).
+   - Update the `BASE_URL` in `services/lessonsService.ts` if your backend runs on a different port or host.
+
+## Project Structure
+
+- `app/` - Next.js App Router pages and layouts
+- `services/` - API service layer
+- `public/` - Static assets
+- `tailwind.config.js` - Tailwind CSS config
+- `postcss.config.js` - PostCSS config
+
+## Useful Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+
+## Learn More
+
+See the monorepo root `README.md` for backend and full-stack setup instructions.
+
+---
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Getting Started
 
