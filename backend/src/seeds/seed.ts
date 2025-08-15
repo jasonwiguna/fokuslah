@@ -3,7 +3,7 @@ import { User } from '../entities/user.entity';
 import { Lesson } from '../entities/lesson.entity';
 import { Problem } from '../entities/problem.entity';
 import { ProblemOption } from '../entities/problem_option.entity';
-const ormconfig = require('../../ormconfig');
+import { AppDataSource } from '../typeorm.config';
 
 export default async function seed(dataSource: DataSource) {
   // Repositories
@@ -85,11 +85,11 @@ export default async function seed(dataSource: DataSource) {
 
 if (require.main === module) {
   (async () => {
-    const dataSource = await ormconfig.initialize();
+    await AppDataSource.initialize();
     try {
-      await seed(dataSource);
+      await seed(AppDataSource);
     } finally {
-      await dataSource.destroy();
+      await AppDataSource.destroy();
     }
   })().then(() => {
     console.log('✅ Seed data inserted successfully');

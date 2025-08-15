@@ -4,7 +4,7 @@ export async function fetchProfile(userId: number) {
   if (!res.ok) throw new Error("Failed to fetch profile");
   return res.json();
 }
-export const BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001/api";
+export const BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3000/api";
 
 export interface Lesson {
   id: number;
